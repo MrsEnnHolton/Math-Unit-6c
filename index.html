@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Checker</title>
+    <script>
+        function checkNumber() {
+            let answers = {
+                8: "C.html",
+                12: "I.html",
+                15: "M.html",
+                17: "T.html",
+                18: "E.html",
+                19: "A.html",
+                22: "G.html",
+                24: "H.html",
+                29: "I.html",
+                32: "S.html",
+                46: "N.html",
+                52: "L.html",
+                57: "U.html",
+                63: "A.html",
+                97: "T.html",
+                159: "M.html",
+		216: "E.html",
+		522: "A.html",
+            };
+            
+            let userInput = parseInt(document.getElementById("numberInput").value);
+            
+            if (answers[userInput]) {
+                window.location.href = answers[userInput];
+            } else {
+                window.location.href = "womp.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter the Correct Answer:</h2>
+    <input type="number" id="numberInput">
+    <button onclick="checkNumber()">Submit</button>
+</body>
+</html>
